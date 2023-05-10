@@ -10,9 +10,9 @@ class CreateRecipes < ActiveRecord::Migration[7.0]
       t.text :ingredients
       t.text :instructions
       t.string :youtube_code
-      t.boolean :approved
+      t.boolean :approved, default: false
       t.belongs_to :user, null: false, foreign_key: true
-      t.boolean :is_local
+      t.boolean :is_local, default: false
 
       t.timestamps
     end
